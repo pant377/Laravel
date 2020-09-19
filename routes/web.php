@@ -16,4 +16,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test','OneTest@test');
+Route::get('/test','App\Http\Controllers\OneTest@test');
+Route::get('/fine','App\Http\Controllers\OneTest@fine');
