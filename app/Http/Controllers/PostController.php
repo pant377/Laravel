@@ -39,12 +39,12 @@ class PostController extends Controller
             'title' => 'required',
             'body' => 'required'
         ]);
-         $posts = new Post;
-         $posts->title = $request->input('title');
-         $posts->body = $request->input('body');
-         $posts->save();
+         $post = new Post;
+         $post->title = $request->input('title');
+         $post->body = $request->input('body');
+         $post->save();
 
-         return view('posts.index');
+         return redirect('/posts')->with('success', 'Post Created');
     }
 
     /**
