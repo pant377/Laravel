@@ -21,7 +21,7 @@
     </head>
       
     <body class="antialiased">
-        <h1>Hello </h1>
+        
         @yield('content')
     </body>
 </html>
