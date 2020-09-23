@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/test','App\Http\Controllers\OneTest@test');
 Route::get('/fine','App\Http\Controllers\OneTest@fine');
 Route::resource('posts', 'App\Http\Controllers\PostController');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
