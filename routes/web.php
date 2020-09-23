@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('home');
-});
-
+    return view('home');});
 Route::get('/test','App\Http\Controllers\OneTest@test');
 Route::get('/fine','App\Http\Controllers\OneTest@fine');
 Route::resource('posts', 'App\Http\Controllers\PostController');
+Route::resource('users', 'App\Http\Controllers\UsersController');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

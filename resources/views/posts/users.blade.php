@@ -7,15 +7,15 @@
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}</div>
                     <div class="card-body">
-                        <h1>Posts</h1>
-                            @if(count($posts) > 0)
-                                @foreach ($posts as $post)
+                        <h1>Users</h1>
+                            @if(count($users) > 0)
+                                @foreach ($users as $user)
                                     <div class="well">
-                                        <h3><a href="/lsapp/public/posts/{{$post->id}}">{{$post->title}}</a></h3>
+                                        <h3><a href="/lsapp/public/users/{{$user->id}}">{{$user->name}} , {{$user->email}}</a></h3>
                                     </div>
                                 @endforeach
                             @else 
-                                <p>No posts here broo</p>
+                                <p>No users here broo</p>
                             @endif        
                     </div>
                 </div>

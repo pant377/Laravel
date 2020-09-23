@@ -10,6 +10,8 @@
                     <a href="/lsapp/public/posts/create">Create Some Posts</a>
                     <hr>
                     <a href="/lsapp/public/posts">View Posts</a>
+                    <hr>
+                    <a href="/lsapp/public/users">View Users</a>
                 </div>
             </div>
         </div>
