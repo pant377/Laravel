@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request; 
 use App\Models\Post;
+use App\Models\User;
 class PostController extends Controller
 {
     /**
@@ -42,6 +43,7 @@ class PostController extends Controller
          $post = new Post;
          $post->title = $request->input('title');
          $post->body = $request->input('body');
+         $post->user_id = auth()->user()->id;
          $post->save();
 
          return redirect('/posts')->with('success', 'Post Created');
