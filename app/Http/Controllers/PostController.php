@@ -15,8 +15,8 @@ class PostController extends Controller
     public function index()
     {
         $user_id = auth()->user()->id;
-        $posts = Post::find($user_id);
-        return view('posts.index')->with('posts',$posts);
+        $user = User::find($user_id);
+        return view('posts.index')->with('posts',$user->post);
     }
 
     /**
